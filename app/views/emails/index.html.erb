@@ -3,29 +3,5 @@
 <%= submit_tag("M'envoyer un email", class: "btn btn-start-order") %>
 <%end%>
 
-<table class="table">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Email</th>
-      <th scope="col">Content</th>
-  
-    </tr>
-     </thead> 
-
-<% @emails.each do |email|  %>
-
-  <tbody>
-    
-    <tr>
-      <th scope="row"><%= email.id %></th>
-      <td><%= email.object %></td>
-      <td><%= email.body %></td>
-    </tr>
-   
-  </tbody>
-  <% end %>
-</table>
-
-
+ <%= render 'email_table'  %>
 
