@@ -5,12 +5,12 @@
     
     <div class="row">
        <button class="btn btn-primary">Marquer comme non-lu</button>
-  
-       <a class="btn btn-danger" href="/emails/<%=@emails.id%>" data-method="delete">  <span class="bold">Supprimer</span>
-</a>
       
+        <%= form_tag("/emails/#{@emails.id}", method: "delete", remote: true) do %>
+        <input class="btn btn-danger" type="submit" value="Supprimer" />
+        <% end %>
      
-   </div>	
+    </div>	
   </div>
 </div> 
 
