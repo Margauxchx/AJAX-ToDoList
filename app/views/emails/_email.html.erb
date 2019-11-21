@@ -1,5 +1,6 @@
 <tr>
       <th ><%= @emails.id %></th>
-      <td ><%= @emails.object %></td>
+      <td > <%= link_to "#{@emails.object}", emails_path(@emails.id), remote: true %></td>
       <td ></td>
+
 </tr>
