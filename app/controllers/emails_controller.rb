@@ -14,6 +14,6 @@ class EmailsController < ApplicationController
   end
   
   def show
-    
+    @emails = Email.find(params[:id])
   end
 end

@@ -7,13 +7,14 @@
   
     </tr>
      </thead> 
+  
 <tbody id="email-table">
 <% @emails.each do |email|  %>
 
     <tr>
       <th scope="row" id="email-id"><%= email.id %></th>
       <td id="email-object"><%= email.object %></td>
-      <td id="email-body"><%= email.body %></td>
+      <td id="email-body"></td>
     </tr>
    
   <% end %>
