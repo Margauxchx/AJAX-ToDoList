@@ -1,0 +1,17 @@
+<div class="card">
+  <h5 class="card-header"><%= @emails.object %></h5>
+  <div class="card-body">
+    <p class="card-text"><%= @emails.body %></p>
+    
+    <div class="row">
+       <button class="btn btn-primary">Marquer comme non-lu</button>
+  
+       <a class="btn btn-danger" href="/emails/<%=@emails.id%>" data-method="delete">  <span class="bold">Supprimer</span>
+</a>
+      
+     
+   </div>	
+  </div>
+</div> 
+
+	

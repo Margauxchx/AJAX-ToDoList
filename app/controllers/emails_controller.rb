@@ -15,5 +15,17 @@ class EmailsController < ApplicationController
   
   def show
     @emails = Email.find(params[:id])
+    
+      respond_to do |format|
+       format.html { }
+       format.js { }
+     end
   end
+  
+  def destroy
+    @emails = Email.find(params[:id])
+    @emails.destroy
+    flash[:notice] = "L'email a bien été supprimé"
+    redirect_to emails_path
+  end		
 end
